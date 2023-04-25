@@ -1,0 +1,15 @@
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--yakit-header-color);
+
+    .check-icon {
+        color: var(--yakit-primary-5);
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
