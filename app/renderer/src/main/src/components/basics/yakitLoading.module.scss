@@ -1,0 +1,286 @@
+.yakit-loading-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .yakit-loading-body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden auto;
+        background: #f8f8f8;
+        display: flex;
+        justify-content: center;
+
+        .body-content {
+            width: 1387px;
+            background-image: url("../../assets/uiLayout/primaryBg.png");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+
+        .yakit-loading-title {
+            margin-top: 16vh;
+            width: 100%;
+
+            .title-style {
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+                line-height: 56px;
+                color: var(--yakit-header-color);
+                font-weight: 600;
+            }
+
+            .subtitle-stlye {
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--yakit-body-text-color);
+            }
+        }
+
+        .yakit-loading-icon-wrapper {
+            margin: 48px auto 0;
+            width: 160px;
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+            font-size: 160px;
+            .theme-icon-wrapper {
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 99;
+                overflow: hidden;
+                -webkit-animation: building-blocks 1s ease 0s infinite;
+                animation: building-blocks 1s ease 0s infinite;
+                animation-direction: alternate;
+            }
+
+            .theme-icon {
+                width: 160px;
+                height: 160px;
+                line-height: 160px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                overflow: hidden;
+            }
+
+            .white-icon {
+                width: 160px;
+                height: 160px;
+                line-height: 160px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .yakit-loading-content {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 16px;
+            color: #f28b44;
+            line-height: 24px;
+        }
+
+        .time-wait-title {
+            color: var(--yakit-helper-text-color);
+        }
+        .time-link-title {
+            color: var(--yakit-primary-5);
+        }
+        .time-out-title {
+            color: var(--yakit-danger-5);
+        }
+
+        .engine-log-btn {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            .btn-style {
+                width: 280px;
+                justify-content: center;
+            }
+        }
+
+        .switch-engine-mode {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 0px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+}
+// 加载图标动画
+@-webkit-keyframes building-blocks {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 0px;
+    }
+}
+
+@keyframes building-blocks {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 0px;
+    }
+}
+
+// 遮罩层
+.yakit-modal-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.hidden-yakit-modal-mask {
+    display: none;
+}
+
+// 弹窗是否置顶
+.modal-top-wrapper {
+    z-index: 999 !important;
+}
+.yaklang-update-modal {
+    width: 448px;
+    z-index: 99;
+}
+.hint-modal-wrapper {
+    position: absolute;
+    top: 35%;
+    left: calc(50% - 224px);
+}
+.modal-yaklang-engine-hint {
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--yakit-card-background-color);
+    border: 1px solid var(--yakit-border-color);
+    box-shadow: 0px 6px 20px rgba(204, 210, 222, 0.3);
+    border-radius: 4px;
+
+    .yaklang-engine-hint-wrapper {
+        width: 100%;
+        padding: 24px;
+        display: flex;
+        gap: 16px;
+        position: relative;
+
+        .hint-draggle-body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 24px;
+        }
+
+        .hint-left-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .hint-icon {
+                width: 32px;
+                height: 32px;
+            }
+            .qs-icon {
+                width: 20px;
+                height: 20px;
+                color: var(--yakit-body-text-color);
+                cursor: pointer;
+            }
+            .qs-icon:hover {
+                color: var(--yakit-primary-5);
+            }
+        }
+
+        .hint-right-wrapper {
+            flex: 1;
+
+            .hint-right-title {
+                height: 24px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--yakit-header-color);
+            }
+
+            .hint-right-content {
+                margin-top: 8px;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--yakit-body-text-color);
+            }
+
+            .hint-right-download {
+                .download-progress {
+                    :global {
+                        .ant-progress-text {
+                            display: block;
+                            margin-left: 0;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+
+                .download-info-wrapper {
+                    margin-top: 16px;
+                    display: flex;
+                    height: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: var(--yakit-helper-text-color);
+
+                    .divider-wrapper {
+                        margin: 0 8px;
+                        width: 1px;
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+
+                        .divider-style {
+                            width: 100%;
+                            height: 12px;
+                            border: 1px solid var(--yakit-border-color);
+                        }
+                    }
+                }
+                .download-btn {
+                    margin-top: 24px;
+                    display: flex;
+                    justify-content: right;
+                    gap: 8px;
+                }
+            }
+
+            .hint-right-btn {
+                margin-top: 24px;
+                display: flex;
+                justify-content: space-between;
+
+                .btn-group-wrapper {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}
