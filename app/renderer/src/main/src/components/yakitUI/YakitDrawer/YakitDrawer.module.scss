@@ -1,0 +1,43 @@
+.yakit-drawer {
+    :global {
+        .ant-drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--yakit-card-background-color);
+            padding: 8px 16px;
+            height: 40px;
+            border-bottom: 1px solid var(--yakit-border-color);
+            color: var(--yakit-header-color);
+            border-radius: 0;
+        }
+        .ant-drawer-title{
+            color: var(--yakit-header-color);
+        }
+        .ant-drawer-close {
+            margin-right: 8px;
+            padding: 0;
+        }
+    }
+}
+
+.yakit-drawer-bottom {
+    :global {
+        .ant-drawer-header {
+            background-color: var(--yakit-card-background-color);
+        }
+    }
+}
+
+.yakit-drawer-icon {
+    color: var(--yakit-helper-text-color);
+    &:hover {
+        color: var(--yakit-primary-5);
+    }
+    .yakit-drawer-remove-icon {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
